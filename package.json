@@ -18,7 +18,7 @@
     "raspi-board": "3.0.0",
     "raspi-gpio": "2.2.2",
     "raspi-i2c": "3.0.0",
-    "raspi-led": "1.3.2",
+    "raspi-led": "goliatone/raspi-led#check_led0_available",
     "raspi-pwm": "3.0.0",
     "raspi-serial": "1.3.1"
   },
