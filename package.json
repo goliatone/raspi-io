@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "raspi": "^2.1.0",
-    "raspi-board": "^3.1.0",
+    "raspi-board": "goliatone/raspi-board#rpi-zero-920093",
     "raspi-gpio": "^2.3.0",
     "raspi-i2c": "^3.1.0",
     "raspi-led": "^1.4.0",
