@@ -3,9 +3,7 @@ Raspi-io
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nebrius/raspi-io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Raspi-io is a Firmata API compatible library for Raspbian running on the [Raspberry Pi](http://www.raspberrypi.org/) that
-can be used as an I/O plugin with [Johnny-Five](https://github.com/rwaldron/johnny-five). The API docs for this module can be
-found on the [Johnny-Five Wiki](https://github.com/rwaldron/io-plugins). Raspi IO supports the Model B Rev 1, Model B Rev 2, Model A+, Model B+, Raspberry Pi 2 Model B, and Raspbery Pi Zero, but does _not_ support the Model A.
+Raspi-io is a Firmata API compatible library for Raspbian running on the [Raspberry Pi](http://www.raspberrypi.org/) that can be used as an I/O plugin with [Johnny-Five](https://github.com/rwaldron/johnny-five). The API docs for this module can be found on the [Johnny-Five Wiki](https://github.com/rwaldron/io-plugins). Raspi IO supports all models of the Raspberry Pi, except for the Model A.
 
 If you have a bug report, feature request, or wish to contribute code, please be sure to check out the [Contributing Guide](/CONTRIBUTING.md).
 
@@ -18,6 +16,8 @@ If you have a bug report, feature request, or wish to contribute code, please be
 - Node 0.12 or newer
 
 Detailed instructions for getting a Raspberry Pi ready for NodeBots, including how to install Node.js, can be found in the [wiki](https://github.com/nebrius/raspi-io/wiki/Getting-a-Raspberry-Pi-ready-for-NodeBots)
+
+#### Warning: this module must be installed as a normal user, but run as the root user
 
 ## Installation
 
@@ -50,6 +50,8 @@ board.on('ready', function() {
 ```
 
 The ```io``` property must be specified explicitly to differentiate from trying to control, say, an Arduino Uno that is plugged into the Raspberry Pi. Note that we specify the pin as ```"P1-7"```, not ```7```. See the [section on pins](#pin-naming) below for an explanation of the pin numbering scheme on the Raspberry Pi.
+
+*Warning:* this module _must_ be run as root, even though it cannot be installed as root.
 
 Note: This module is not intended to be used directly. If you do not want to use Johnny-Five, I recommend taking a look at [Raspi.js](https://github.com/nebrius/raspi), which underpins this library and is a little more straight-forward to use than using raspi-io directly.
 
